@@ -1,2 +1,3 @@
-# personal-scripts
+# Personal Scripts
+
 Personal repository for convenience scripts.
