@@ -7,7 +7,7 @@ export PATH="$PYTHON_PATH/Scripts:$PATH"
 export PATH="$PYTHON_PATH:$PATH"
 
 # Personal scripts repository
-export PATH="~/personal-scripts/:$PATH"
+export PATH="$HOME/personal-scripts/:$PATH"
 
 ##
 # Text editing
@@ -107,6 +107,7 @@ alias mypath='echo $PATH | tr ":" "\n" '
 ##
 # Git
 #
+
 alias g-a=" git add "
 alias g-ad=" git add . "
 alias g-clone=" git clone "
@@ -117,4 +118,42 @@ alias g-o=" git checkout "
 alias g-om=" git checkout main "
 alias g-b=" git branch "
 alias g-shove='git add . && git commit -m "Add quick update (via bash alias)" && git push'
+alias g-pa="pull_all.sh"
+
+##
+# Update this .bash_profile
+#
+
+PERSONAL_SCRIPTS_DIR="$HOME/personal-scripts"
+BASH_PROFILE_LOCAL_COPY="$PERSONAL_SCRIPTS_DIR/bash_profiles/personal_development.bash_profile"
+PERSONAL_SCRIPTS_REPOSITORY="https://github.com/mauro-j-sanchirico/personal-scripts.git"
+
+# Clone the latest personal scripts repository
+clone_personal_scripts() {
+  current_dir="$(pwd)"
+  cd ~
+  pwd
+  echo "$PERSONAL_SCRIPTS_DIR"
+  if [ -d "$PERSONAL_SCRIPTS_DIR" ]; then
+    echo "Personal scripts already cloned. Pulling latest changes..."
+    cd "$PERSONAL_SCRIPTS_DIR" &&
+	git pull
+  else
+    echo "Cloning personal scripts..."
+    git clone "$PERSONAL_SCRIPTS_REPOSITORY"
+  fi
+  cd "$current_dir"
+}
+
+update_bash_profile() {
+  cp "$HOME/.bash_profile" "$BASH_PROFILE_LOCAL_COPY" &&
+  cd "$PERSONAL_SCRIPTS_DIR"
+  git add . &&
+  git commit -m "Update .bash_profile via alias" &&
+  git push;
+  cd -
+}
+
+alias pull-scripts="clone_personal_scripts"
+alias update-bp="update_bash_profile"
 
