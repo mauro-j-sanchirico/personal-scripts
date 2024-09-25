@@ -21,7 +21,7 @@
 # Use the first argument to pull from all repositories that are in a given
 # directory.
 #
-# ./pull_all.sh <DIRECTOR_NAME>
+# ./pull_all.sh <DIRECTORY_NAME>
 #
 # =============================================================================
 
