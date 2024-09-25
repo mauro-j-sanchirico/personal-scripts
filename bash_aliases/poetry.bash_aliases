@@ -1,0 +1,7 @@
+alias p-el=" poetry env list "
+alias p-ei=" poetry env info --path "
+alias p-n=" poetry new "
+alias p-init=" poetry init "
+alias p-a=" poetry add "
+alias p-install=" poetry install "
+alias p-inr=" poetry install --no-root "
