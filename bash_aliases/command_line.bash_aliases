@@ -73,5 +73,6 @@ alias mypath='echo $PATH | tr ":" "\n" '
 # Apply correct line endings for OS
 #
 
-alias d2u-all=' find . -type f -name "*.sh" | grep -v "\.venv" | xargs grep -l '\r' | xargs dos2unix '
-alias u2d-all=' find . -type f -name "*.sh" | grep -v "\.venv" | xargs grep -l '\r' | xargs unix2dos '
+alias find-dos-line-endings=" find . -type f \\( -name \"*.sh\" -o -name \"*.bash\" \\) | grep -v \".venv\" | xargs grep -Ul $'\r' "
+alias d2u-all=" find . -type f -name \"*.sh\" | grep -v \".venv\" | xargs dos2unix "
+alias u2d-all=" find . -type f -name \"*.sh\" | grep -v \".venv\" | xargs unix2dos "

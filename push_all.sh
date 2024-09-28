@@ -20,9 +20,9 @@
 #
 # =============================================================================
 
-CORRECT_ARGC="2"
+CORRECT_ARGC=2
 
-if [ "$#" -neq 2 ]; then
+if [ "$#" -ne $CORRECT_ARGC ]; then
     echo "Usage: push_all.sh <directory_name> <commit message>"
     echo 'Example: push_all.sh . "Update README.md"'
     exit 1
