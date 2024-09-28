@@ -68,3 +68,5 @@ alias where='
             '
 
 alias mypath='echo $PATH | tr ":" "\n" '
+
+alias u2d-all=' find . -type f -name "*.sh" | grep -v "\.venv" | xargs grep -l '\r' | xargs dos2unix '
