@@ -16,9 +16,17 @@
 # Use the first argument to push to all repositories that are in a given
 # directory and the second to specify the commit message.
 #
-# ./pull_all.sh <DIRECTORY_NAME> "Update README.md"
+# ./push_all.sh <DIRECTORY_NAME> "Update README.md"
 #
 # =============================================================================
+
+CORRECT_ARGC="2"
+
+if [ "$#" -neq 2 ]; then
+    echo "Usage: push_all.sh <directory_name> <commit message>"
+    echo 'Example: push_all.sh . "Update README.md"'
+    exit 1
+fi
 
 working_directory=${1:-$(pwd)}
 working_directory=$(realpath "$working_directory")
