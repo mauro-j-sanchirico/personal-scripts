@@ -11,3 +11,6 @@ alias g-b=" git branch "
 alias g-shove='git add . && git commit -m "Add quick update (via bash alias)" && git push'
 alias g-pa="pull_all.sh"
 alias g-rso=" git remote set-url origin "
+alias g-suir=" git submodule update --init --recursive "
+alias g-crs=" git clone --recurse-submodules "
+alias g-prs=" git pull --recurse-submodules "
