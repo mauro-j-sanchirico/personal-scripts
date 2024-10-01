@@ -10,3 +10,4 @@ alias g-om=" git checkout main "
 alias g-b=" git branch "
 alias g-shove='git add . && git commit -m "Add quick update (via bash alias)" && git push'
 alias g-pa="pull_all.sh"
+alias g-rso=" git remote set-url origin "
