@@ -1,4 +1,4 @@
-# Bash: sudo Snippets
+# Bash: `sudo` Snippets
 
 ## Carry Forward Current Environment
 
