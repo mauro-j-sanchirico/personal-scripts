@@ -1,5 +1,6 @@
 alias p-el=" poetry env list "
-alias p-ei=" poetry env info --path "
+alias p-eip=" poetry env info --path "
+alias p-eip=" poetry env info "
 alias p-n=" poetry new "
 alias p-init=" poetry init "
 alias p-a=" poetry add "
