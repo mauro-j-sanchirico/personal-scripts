@@ -32,6 +32,9 @@ alias c=" clear "
 
 alias h=" history "
 
+alias path-echo="echo \"$PATH\" | tr ':' '\n'"
+function path-find { echo $PATH | tr ':' '\n' | grep $1; }
+
 ##
 # Find useful programs
 #
