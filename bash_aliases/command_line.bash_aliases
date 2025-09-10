@@ -76,3 +76,9 @@ alias mypath='echo $PATH | tr ":" "\n" '
 alias find-dos-line-endings=" find . -type f \\( -name \"*.sh\" -o -name \"*.bash\" \\) | grep -v \".venv\" | xargs grep -Ul $'\r' "
 alias d2u-all=" find . -type f -name \"*.sh\" | grep -v \".venv\" | xargs dos2unix "
 alias u2d-all=" find . -type f -name \"*.sh\" | grep -v \".venv\" | xargs unix2dos "
+
+##
+# Edit bash configuration
+#
+alias editbashvscode='code ~/.bashrc ~/.bash_profile ~/.profile ~/.bash_login /etc/profile &'
+alias editbashvim='vim ~/.bashrc ~/.bash_profile ~/.profile ~/.bash_login /etc/profile &'
