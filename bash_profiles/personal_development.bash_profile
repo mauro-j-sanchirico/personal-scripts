@@ -2,9 +2,14 @@
 # Path configuration
 #
 
-PYTHON_PATH=/c/Users/sanch/AppData/Local/Programs/Python/Python312
+# Python
+PYTHON_PATH="$HOME/AppData/Local/Programs/Python/Python313"
 export PATH="$PYTHON_PATH/Scripts:$PATH"
 export PATH="$PYTHON_PATH:$PATH"
+
+# Poetry
+POETRY_PATH="$APPDATA/pypoetry/venv/Scripts"
+export PATH="$POETRY_PATH:$PATH"
 
 # Personal scripts repository
 export PATH="$HOME/personal-scripts/:$PATH"
