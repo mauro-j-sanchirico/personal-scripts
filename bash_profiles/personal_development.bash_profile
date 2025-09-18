@@ -67,7 +67,7 @@ source $PERSONAL_ALIASES_PATH/notepad_plusplus.bash_aliases
 # Poetry configuration
 #
 poetry config virtualenvs.in-project true
-poetry env use "$PYTHON_EXE"
+alias poetry-use=" poetry env use \"$PYTHON_EXE\""
 source $PERSONAL_ALIASES_PATH/poetry.bash_aliases
 
 ##
