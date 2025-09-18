@@ -10,6 +10,7 @@ add_path() {
 }
 
 PYTHON_PATH="$HOME/AppData/Local/Programs/Python/Python313"
+PYTHON_EXE="$PYTHON_PATH/python.exe"
 PYTHON_SCRIPTS_PATH="$PYTHON_PATH/Scripts"
 POETRY_PATH="$(cygpath -u $APPDATA)/pypoetry/venv/Scripts"
 PERSONAL_SCRIPTS_PATH="$HOME/personal-scripts"
@@ -66,6 +67,7 @@ source $PERSONAL_ALIASES_PATH/notepad_plusplus.bash_aliases
 # Poetry configuration
 #
 poetry config virtualenvs.in-project true
+poetry env use "$PYTHON_EXE"
 source $PERSONAL_ALIASES_PATH/poetry.bash_aliases
 
 ##
