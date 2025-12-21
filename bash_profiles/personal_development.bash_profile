@@ -14,14 +14,19 @@ PYTHON_EXE="$PYTHON_PATH/python.exe"
 PYTHON_SCRIPTS_PATH="$PYTHON_PATH/Scripts"
 POETRY_PATH="$(cygpath -u $APPDATA)/pypoetry/venv/Scripts"
 PERSONAL_SCRIPTS_PATH="$HOME/personal-scripts"
+BASH_SCRIPTS_PATH="$PERSONAL_SCRIPTS_PATH/bash_scripts"
+PS_SCRIPTS_PATH="$PERSONAL_SCRIPTS_PATH/ps_scripts"
 
 add_path $PYTHON_PATH
 add_path $PYTHON_SCRIPTS_PATH
 add_path $POETRY_PATH
-add_path $PERSONAL_SCRIPTS_PATH
+add_path $BASH_SCRIPTS_PATH
+add_path $PS_SCRIPTS_PATH
+
+alias python="$PYTHON_EXE"
 
 ##
-# Update this .bash_profile
+# Personal scripts configuration
 #
 PERSONAL_ALIASES_PATH="$PERSONAL_SCRIPTS_PATH/bash_aliases"
 BASH_PROFILE_LOCAL_COPY="$PERSONAL_SCRIPTS_PATH/bash_profiles/personal_development.bash_profile"
@@ -44,19 +49,7 @@ clone_personal_scripts() {
   cd "$current_dir"
 }
 
-# Take the latest local .bash_profile and push it to git
-push_bash_profile() {
-  cp "$HOME/.bash_profile" "$BASH_PROFILE_LOCAL_COPY" &&
-  cd "$PERSONAL_SCRIPTS_PATH" &&
-  git add . &&
-  git commit -m "Update .bash_profile via alias" &&
-  git push;
-  cd -
-}
-
 alias pull-scripts="clone_personal_scripts"
-alias push-bp="push_bash_profile"
-alias update-bp=" cp $BASH_PROFILE_LOCAL_COPY $HOME/.bash_profile"
 
 ##
 # Text editing
