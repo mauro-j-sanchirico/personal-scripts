@@ -85,3 +85,8 @@ alias u2d-all=" find . -type f -name \"*.sh\" | grep -v \".venv\" | xargs unix2d
 #
 alias editbashvscode='code ~/.bashrc ~/.bash_profile ~/.profile ~/.bash_login /etc/profile &'
 alias editbashvim='vim ~/.bashrc ~/.bash_profile ~/.profile ~/.bash_login /etc/profile &'
+
+##
+# Email summarizer
+#
+alias outlook-digest='uv run --project ~/personal-scripts/python_scripts/ ~/personal-scripts/python_scripts/outlook_to_txt.py --single-file . emails.txt'
