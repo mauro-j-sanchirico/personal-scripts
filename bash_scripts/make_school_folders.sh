@@ -1,25 +1,18 @@
 #!/bin/bash
 
 folders=(
-    "accommodations"
-    "administrative"
-    "advising"
-    "answers"
-    "archives"
-    "assignments"
-    "classes"
-    "exams"
-    "figures"
-    "grades"
-    "logo"
-    "notes"
-    "quizzes"
-    "references"
-    "resources"
-    "roster"
-    "slides"
-    "solutions"
-    "student"
+    "Accommodations"
+    "Administrative"
+    "Advising"
+    "Answers"
+    "Exemplars"
+    "Figures"
+    "Grades"
+    "Logo"
+    "Notes"
+    "References"
+    "Roster"
+    "Slides"
 )
 
 for folder in "${folders[@]}"; do

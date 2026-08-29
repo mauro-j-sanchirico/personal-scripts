@@ -26,6 +26,13 @@ add_path $PS_SCRIPTS_PATH
 alias python="$PYTHON_EXE"
 
 ##
+# API Keys
+#
+if [ -f "$HOME/.secrets/api_keys.sh" ]; then
+    source "$HOME/.secrets/api_keys.sh"
+fi
+
+##
 # Personal scripts configuration
 #
 PERSONAL_ALIASES_PATH="$PERSONAL_SCRIPTS_PATH/bash_aliases"
