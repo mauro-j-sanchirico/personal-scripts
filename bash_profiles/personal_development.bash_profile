@@ -66,7 +66,10 @@ source $PERSONAL_ALIASES_PATH/notepad_plusplus.bash_aliases
 ##
 # Poetry configuration
 #
-poetry config virtualenvs.in-project true
+
+# Uncomment for local virtual environments in project directories
+# poetry config virtualenvs.in-project true
+
 alias poetry-use=" poetry env use \"$PYTHON_EXE\""
 source $PERSONAL_ALIASES_PATH/poetry.bash_aliases
 
