@@ -16,3 +16,7 @@ alias g-crs=" git clone --recurse-submodules "
 alias g-prs=" git pull --recurse-submodules "
 alias g-surm=" git submodule update --remote --merge "
 alias g-grade=' git add . && git commit -m "Grade assignment" && git push '
+
+g-push() {
+    git add . && git commit -m "$*" && git push
+}
