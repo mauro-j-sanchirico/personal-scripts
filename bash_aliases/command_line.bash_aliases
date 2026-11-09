@@ -83,8 +83,8 @@ alias u2d-all=" find . -type f -name \"*.sh\" | grep -v \".venv\" | xargs unix2d
 ##
 # Edit bash configuration
 #
-alias editbashvscode='code ~/.bashrc ~/.bash_profile ~/.profile ~/.bash_login /etc/profile &'
-alias editbashvim='vim ~/.bashrc ~/.bash_profile ~/.profile ~/.bash_login /etc/profile &'
+alias editbashvscode='code ~/.bashrc ~/.bash_profile ~/.profile ~/.bash_login ~/.bash_auth /etc/profile &'
+alias editbashvim='vim ~/.bashrc ~/.bash_profile ~/.profile ~/.bash_login ~/.bash_auth /etc/profile &'
 
 ##
 # Email summarizer
